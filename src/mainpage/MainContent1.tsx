@@ -1,14 +1,17 @@
 import React, {FC} from "react";
 import styled from "styled-components";
+import {MainContent} from "../addquestionmultiple/MainContent";
+import {BrowserRouter, Link} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 
-
-export const MainContent1 : FC<any> = ({}) => {
+export const MainContent1  = ({}) => {
     const ButtonsFunction = (e:any, name:string) => {
         alert(`${name} was clicked`);
     };
+
     const ButtonMain2Function = (e:any, name:string) => {
-        alert(`${name} was clicked`);
+
     };
     const ButtonMain3Function = (e:any, name:string) => {
         alert(`${name} was clicked`);
@@ -128,7 +131,9 @@ export const MainContent1 : FC<any> = ({}) => {
                                         <Clear
                                             src={"https://file.rendit.io/n/PnZwUrMPu5cI0dVV0ZeZ.svg"}
                                         />
-                                        <Title2 color={"#4282aa"}>Add Question</Title2>
+                                        <button style={add_question}>
+                                        <Link to="/MainContent">Add Question</Link>
+                                        </button>
                                     </MasterButton2>
                                 </ButtonMain2>
                             </FlexRow11>
@@ -285,6 +290,9 @@ export const MainContent1 : FC<any> = ({}) => {
         </MainContentRoot>
     );
 };
+
+
+
 const MainContentRoot = styled.div`
   height: 900px;
   display: flex;
@@ -296,6 +304,12 @@ const MainContentRoot = styled.div`
   margin: auto;
   min-width: 1371px;
 `;
+
+const add_question = {
+    height: "30px",
+    width: "600px"
+}
+
 const PageHeader1 = styled.div`
   display: flex;
   flex-direction: row;
@@ -367,7 +381,7 @@ const Buttons = styled.button`
   background: none;
   box-sizing: content-box;
   cursor: pointer;
-  &: hover {
+  &:hover {
     opacity: 70%;
   }
 `;
@@ -508,7 +522,7 @@ const ButtonMain2 = styled.button`
   background: none;
   box-sizing: content-box;
   cursor: pointer;
-  &: hover {
+  &:hover {
     opacity: 70%;
   }
 `;
@@ -695,7 +709,12 @@ const FlexColumn = styled.div<ShadowedProps>`
   align-items: flex-start;
   flex-direction: ${(props) => props.flexDirection};
 `;
-const FlexRow:any = styled.div`
+
+interface FlexRow {
+    gap:string
+};
+
+const FlexRow:any = styled.div<FlexRow>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -706,14 +725,24 @@ const Image1 = styled.img`
   width: 16px;
   height: 16px;
 `;
-const FlexRow1:any = styled.div`
+
+interface FlexRow1Props {
+    gap:string
+};
+
+const FlexRow1:any = styled.div<FlexRow1Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
   gap: ${(props) => props.gap};
 `;
-const ButtonMain:any = styled.div`
+
+interface ButtonMainProps {
+    gap:string
+};
+
+const ButtonMain:any = styled.div<ButtonMainProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -731,14 +760,24 @@ const Title2 = styled.div`
   line-height: 19.6px;
   color: ${(props) => props.color};
 `;
-const FullLayout:any = styled.div`
+
+interface FullLayoutProps {
+    gap:string
+};
+
+const FullLayout:any = styled.div<FullLayoutProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: ${(props) => props.gap};
 `;
-const LeftSide:any = styled.div`
+
+interface LeftSideProps {
+    borderRadius:string
+};
+
+const LeftSide:any = styled.div<LeftSideProps>`
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -763,7 +802,12 @@ const Title4 = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const Title6:any = styled.div`
+
+interface Title6Props {
+    fontSize:string
+};
+
+const Title6:any = styled.div<Title6Props>`
   display: flex;
   font-family: Poppins;
   font-weight: 600;
@@ -797,7 +841,12 @@ const CheckBox1 = styled.div`
   justify-content: flex-end;
   align-items: center;
 `;
-const WhiteFlexRow1:any = styled.div`
+
+interface WhiteFlexRow1Props {
+    backgroundColor:string
+};
+
+const WhiteFlexRow1:any = styled.div<WhiteFlexRow1Props>`
   height: 40px;
   display: flex;
   overflow: hidden;
@@ -811,7 +860,12 @@ const WhiteFlexRow1:any = styled.div`
   padding: 4px 24px 4px 12px;
   background-color: ${(props) => props.backgroundColor};
 `;
-const FlexRow15:any = styled.div`
+
+interface FlexRow15Props {
+    height:string
+};
+
+const FlexRow15:any = styled.div<FlexRow15Props>`
   width: 251px;
   display: flex;
   flex-direction: row;

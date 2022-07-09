@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-export const QuestionTYPEMatching1 = ({}) => {
+
+export const QuestionTypeMatching1:any = ({}) => {
     const ButtonsFunction = (e:any, name:string) => {
         alert(`${name} was clicked`);
     };
@@ -88,7 +89,7 @@ export const QuestionTYPEMatching1 = ({}) => {
                     </UserMenu>
                 </WhiteFlexColumn>
             </Sidebar>
-            <MainContent>
+            <QuestionTYPEMatching1>
                 <MainMenuItem gap={"0px"}>
                     <PageHeader>
                         <Header>
@@ -383,7 +384,7 @@ export const QuestionTYPEMatching1 = ({}) => {
                         </QuestionArea8>
                     </Element2>
                 </FlexColumn>
-            </MainContent>
+            </QuestionTYPEMatching1>
         </QuestionTYPEMatchingRoot>
     );
 };
@@ -467,7 +468,8 @@ const FlexRow8 = styled.div`
   align-items: center;
   border-radius: 48px;
 `;
-const MainContent = styled.div`
+
+ const QuestionTYPEMatching1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -638,14 +640,24 @@ const Image13 = styled.img`
   width: 87px;
   height: 46px;
 `;
-const MainMenu = styled.div`
+
+interface MainMenuProps {
+    margin:string
+};
+
+const MainMenu = styled.div<MainMenuProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin: ${(props) => props.margin};
 `;
-const MainMenuMaster = styled.div`
+
+interface MainMenuMasterProps {
+    margin:string
+};
+
+const MainMenuMaster = styled.div<MainMenuMasterProps>`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -653,14 +665,24 @@ const MainMenuMaster = styled.div`
   align-items: flex-start;
   margin: ${(props) => props.margin};
 `;
-const MainMenuItem = styled.div`
+
+interface MainMenuItemProps {
+    gap:string
+};
+
+const MainMenuItem = styled.div<MainMenuItemProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: ${(props) => props.gap};
 `;
-const FlexRow = styled.div`
+
+interface FlexRowProps {
+    backgroundColor:string
+};
+
+const FlexRow = styled.div<FlexRowProps>`
   width: 48px;
   height: 48px;
   display: flex;
@@ -677,14 +699,24 @@ const Lsgraph = styled.img`
   width: 28px;
   height: 28px;
 `;
-const FlexColumn = styled.div`
+
+interface FlexColumnProps {
+    gap:string
+};
+
+const FlexColumn = styled.div<FlexColumnProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: ${(props) => props.gap};
 `;
-const FlexRow9 = styled.div`
+
+interface FlexRow9Props {
+    gap:string
+};
+
+const FlexRow9 = styled.div<FlexRow9Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -707,14 +739,24 @@ const Title1 = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const FlexRow10 = styled.div`
+
+interface FlexRow10Props {
+    gap:string
+};
+
+const FlexRow10 = styled.div<FlexRow10Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
   gap: ${(props) => props.gap};
 `;
-const Buttons = styled.button`
+
+interface ButtonsProps {
+    gap:string
+};
+
+const Buttons = styled.button<ButtonsProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -724,7 +766,7 @@ const Buttons = styled.button`
   background: none;
   box-sizing: content-box;
   cursor: pointer;
-  &: hover {
+  &:hover {
     opacity: 70%;
   }
   gap: ${(props) => props.gap};
@@ -740,7 +782,12 @@ const Title3 = styled.div`
   line-height: 19.6px;
   color: ${(props) => props.color};
 `;
-const MasterButton1 = styled.div`
+
+interface MasterButton1Props {
+    backgroundColor:string
+};
+
+const MasterButton1 = styled.div<MasterButton1Props>`
   border-width: 1px;
   border-color: #4282aa;
   border-style: solid;
@@ -753,7 +800,12 @@ const MasterButton1 = styled.div`
   padding: 8px 16px;
   background-color: ${(props) => props.backgroundColor};
 `;
-const Element2 = styled.div`
+
+interface Element2Props {
+    flexDirection:string
+};
+
+const Element2 = styled.div<Element2Props>`
   display: flex;
   gap: 12px;
   justify-content: flex-start;
@@ -798,7 +850,12 @@ const QuestionArea = styled.div`
   border-radius: 4px;
   padding: 16px;
 `;
-const TextArea2 = styled.div`
+
+interface TextArea2Props {
+    gap:string
+};
+
+const TextArea2 = styled.div<TextArea2Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -820,7 +877,12 @@ const TextArea1 = styled.div`
   align-items: center;
   flex-grow: 1;
 `;
-const Text9 = styled.div`
+
+interface Text9Props {
+    minWidth:string
+};
+
+const Text9 = styled.div<Text9Props>`
   font-size: 16px;
   font-family: Poppins;
   line-height: 24px;

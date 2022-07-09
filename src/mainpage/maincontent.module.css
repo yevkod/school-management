@@ -9,6 +9,7 @@
     margin: auto;
     min-width: 1371px;
 }
+
 .pageHeader1 {
     display: flex;
     flex-direction: row;
@@ -80,10 +81,10 @@
     background: none;
     box-sizing: content-box;
     cursor: pointer;
-&: hover {
+&:hover {
      opacity: 70%;
+
  }
-}
 .masterButton {
     display: flex;
     flex-direction: row;
@@ -221,7 +222,7 @@
     background: none;
     box-sizing: content-box;
     cursor: pointer;
-&: hover {
+&:hover {
      opacity: 70%;
  }
 }

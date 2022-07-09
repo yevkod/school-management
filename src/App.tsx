@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Routes, Route, Link} from "react-router-dom";
 import './App.css';
+import {MainContent1} from "./mainpage/MainContent1";
+import {MainContent} from "./addquestionmultiple/MainContent";
+import {QuestionTypeMatching1} from "./addquestionmatching/QuestionTypeMatching1";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default function App() {
+    document.body.style.backgroundColor = '#f6f9fb';
+    document.body.style.margin = '0';
+    document.body.style.backgroundColor = '#e5e5e5';
+    document.body.style.margin = '0';
+    return (
+        <>
+        <Routes>
+            <Route path='/' element={<MainContent1/>} />
+            <Route path='/MainContent' element={<MainContent/>} />
+            <Route path='/QuestionTypeMatching1' element={<QuestionTypeMatching1/>} />
+        </Routes>
+        </>
+    )
 }
 
-export default App;

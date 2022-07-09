@@ -18,6 +18,15 @@
     align-self: stretch;
     flex-grow: 1;
 }
+
+.linkTitle {
+    font-size: 10px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 14px;
+    color: #717782;
+}
+
 .header {
     width: 1323px;
     display: flex;

@@ -1,0 +1,1 @@
+const ws = new WebSocket('wss://front-test-sockets.herokuapp.com')

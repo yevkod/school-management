@@ -1,0 +1,251 @@
+.questionTypeMatchingRoot {
+    background-color: #f6f9fb;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+    min-width: 1440px;
+}
+.sidebar {
+    border-width: 1px;
+    border-color: #d0e7ef;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.whiteFlexColumn {
+    width: 48px;
+    height: 772px;
+    background-color: #ffffff;
+    display: flex;
+    align-self: stretch;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 10px 56px 10px;
+}
+.flexRow6 {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.element1 {
+    text-align: center;
+    display: flex;
+    font-size: 11px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 13.86px;
+    color: #ffffff;
+    background-color: #e32a99;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+.userMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.flexRow8 {
+    border-width: 2px;
+    border-color: #b2b7c1;
+    border-style: solid;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 48px;
+}
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 40px 0px;
+}
+.pageHeader {
+    width: 1371px;
+    background-color: #f6f9fb;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+    flex-grow: 1;
+}
+.header {
+    width: 1323px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 24px;
+}
+.title {
+    font-size: 10px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 14px;
+    color: #717782;
+}
+.studentName {
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 36px;
+    color: #4282aa;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.masterButton {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+.dropdownMaster {
+    border-width: 1px;
+    border-color: #d0e7ef;
+    border-style: solid;
+    width: 698px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 8px;
+    padding: 16px 24px 16px 16px;
+}
+.title5 {
+    display: flex;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    color: #4282aa;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.textArea15 {
+    width: 269px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.text16 {
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+    color: #777777;
+    width: 95px;
+    height: 23px;
+}
+.textArea17 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+    min-width: 700px;
+}
+.text18 {
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 24px;
+    color: #777777;
+}
+.buttonMain2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    border-width: 0px;
+    background: none;
+    box-sizing: content-box;
+    cursor: pointer;
+&: hover {
+     opacity: 70%;
+ }
+}
+.questionArea8 {
+    border-width: 1px;
+    border-color: #d0e7ef;
+    border-style: solid;
+    height: 86px;
+    background-color: #ffffff;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 4px;
+    padding: 16px;
+}
+.textArea19 {
+    width: 666px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.graduationcapf2 {
+    width: 31px;
+    height: 31px;
+}
+.text20 {
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 19.2px;
+    color: #777777;
+}
+.image13 {
+    width: 87px;
+    height: 46px;
+}

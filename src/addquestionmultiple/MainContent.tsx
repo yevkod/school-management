@@ -1,10 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-export const MainContent1 = ({}) => {
-    const ButtonsFunction = (e, name) => {
+import {Link} from "react-router-dom";
+import {useState} from "react";
+import Select from 'react-select';
+import "./maincontent.module.css";
+import {MainContent1} from "../mainpage/MainContent1";
+import {QuestionTypeMatching1} from "../addquestionmatching/QuestionTypeMatching1";
+import { renderToString } from 'react-dom/server'
+
+
+// interface options {
+//     value: string;
+//     label:string;
+// }
+
+const options = [
+    {
+        value: 'MainContent',
+        label: 'Multiple choice'
+    },
+    {
+        value: 'QuestionTypeMatching1',
+        label: 'Matching'
+    },
+]
+
+
+
+export const singleSelect = () => {
+
+}
+
+
+export const MainContent = ({}) => {
+    const [currentMatching, setCurrentMatching] = useState('Multiple choice')
+
+    const getValue = () => {
+        return currentMatching ? options.find(c => c.value === currentMatching) : '/MainContent'
+    }
+
+    const onChange = (newValue: any) => {
+        setCurrentMatching(newValue.value)
+    }
+
+    const ButtonsFunction = (e:any, name:string) => {
         alert(`${name} was clicked`);
     };
-    const ButtonMain2Function = (e, name) => {
+    const ButtonMain2Function = (e:any, name:string) => {
         alert(`${name} was clicked`);
     };
     return (
@@ -23,7 +65,9 @@ export const MainContent1 = ({}) => {
                                 <Image6
                                     src={"https://file.rendit.io/n/tk9Tz1mqbmhXU9l4h1gv.svg"}
                                 />
-                                <Title1>New Exam Title here</Title1>
+                                <div className='linkTitle'>
+                                <Link to="/">New Exam Title here</Link>
+                                </div>
                                 <Image6
                                     src={"https://file.rendit.io/n/tk9Tz1mqbmhXU9l4h1gv.svg"}
                                 />
@@ -70,8 +114,8 @@ export const MainContent1 = ({}) => {
                                         src={"https://file.rendit.io/n/cx95KNB3JxH3TfbZNkP7.png"}
                                     />
                                     <PageHeader1>
-                                        <ButtonMain gap={"0px"}>
-                                            <Title5>Multiple choice</Title5>
+                                        <ButtonMain style={butselect} gap={"0px"}>
+                                            <Select onChange={() => onChange} value={getValue()} options={options} placeholder="Multiple choice" />
                                         </ButtonMain>
                                     </PageHeader1>
                                 </FlexRow>
@@ -288,6 +332,12 @@ const MainContentRoot = styled.div`
   margin: auto;
   min-width: 1371px;
 `;
+
+const butselect = {
+    width: "400px",
+    height: "40px"
+}
+
 const PageHeader = styled.div`
   width: 1371px;
   background-color: #f6f9fb;
@@ -471,14 +521,24 @@ const PageHeader1 = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 `;
-const FlexColumn = styled.div`
+
+interface ShadowedProps {
+    flexDirection:string
+};
+
+const FlexColumn = styled.div<ShadowedProps>`
   display: flex;
   gap: 8px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: ${(props) => props.flexDirection};
 `;
-const FlexRow = styled.div`
+
+interface FlexRowProps {
+    gap:string
+};
+
+const FlexRow = styled.div<FlexRowProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -501,14 +561,24 @@ const Title1 = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const FlexRow1 = styled.div`
+
+interface GapProps {
+    gap:string
+};
+
+const FlexRow1 = styled.div<GapProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
   gap: ${(props) => props.gap};
 `;
-const Buttons = styled.button`
+
+interface ButProps {
+    gap:string
+};
+
+const Buttons = styled.button<ButProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -523,7 +593,12 @@ const Buttons = styled.button`
   }
   gap: ${(props) => props.gap};
 `;
-const ButtonMain = styled.div`
+
+interface ButGapProps {
+    gap:string
+};
+
+const ButtonMain = styled.div<ButGapProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -541,7 +616,12 @@ const Title3 = styled.div`
   line-height: 19.6px;
   color: ${(props) => props.color};
 `;
-const MasterButton1 = styled.div`
+
+interface BackgroundColorProps{
+    backgroundColor:string
+};
+
+const MasterButton1 = styled.div<BackgroundColorProps>`
   border-width: 1px;
   border-color: #4282aa;
   border-style: solid;
@@ -575,7 +655,12 @@ const Graduationcapf = styled.img`
   width: 32px;
   height: 32px;
 `;
-const TextArea2 = styled.div`
+
+interface WidthProps {
+    width:string
+};
+
+const TextArea2 = styled.div<WidthProps>`
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -588,7 +673,12 @@ const Image1 = styled.img`
   width: 24px;
   height: 24px;
 `;
-const Answer = styled.div`
+
+interface AnswerProps {
+    gap:string
+};
+
+const Answer = styled.div<AnswerProps>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
